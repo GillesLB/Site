@@ -30,7 +30,7 @@
       <ul class="side-nav" id="mobile-demo">
         <li><a class="waves-effect" href="maison_fr.html">Maison</a></li>
         <li><a class="waves-effect" href="region_fr.html">Région</a></li>
-        <li><a class="waves-effect" href="formulaire_fr.html" class="actuel">Formulaire</a></li>
+        <li><a class="waves-effect" href="formulaire_fr.html" style="color:#558b2f">Formulaire</a></li>
       </ul>
     </div>
   </nav>
@@ -46,33 +46,32 @@
 <br>
 <p class="coord">Quelles sont vos coordonnées ?</p>
 <div class="row">
-    <form name="saisie" class="col s12" action="test.html">
+    <form name="saisie" class="col s12" method="post" action="traitement.php">
       <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s5">
           <i class="material-icons prefix">person_pin</i>
-          <input id="nom" placeholder="Nom" type="text" class="validate">
+          <input id="nom" placeholder="Nom" type="text" class="validate" required="required">
+          <label for="text" data-error="Erreur" data-success="Correct">Nom</label>
           <label for="icon_prefix">Nom</label>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s5">
           <i class="material-icons prefix">person_pin</i>
-          <input id="prenom" placeholder="Prénom" type="text" class="validate">
+          <input id="prenom" placeholder="Prénom" type="text" class="validate" required="required">
+          <label for="text" data-error="Erreur" data-success="Correct">Prénom</label>
           <label for="icon_prefix">Prénom</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s4">
           <i class="material-icons prefix">email</i>
-          <input id="email" placeholder="E-mail" type="email" class="validate">
-          <label for="email" data-error="wrong" data-success="right">E-mail</label>
+          <input id="email" placeholder="E-mail" type="email" class="validate" required="required">
+          <label for="email" data-error="Erreur" data-success="Correct">E-mail</label>
           <label for="icon_prefix">E-mail</label>
         </div>
-      </div>
-      <div class="row">
         <div class="input-field col s4">
           <i class="material-icons prefix">smartphone</i>
-          <input id="nTelephone" placeholder="Numéro de téléphone" type="text" class="validate">
+          <input id="nTelephone" placeholder="Numéro de téléphone" type="text" class="validate" required="required">
+          <label for="text" data-error="Erreur" data-success="Correct">Numéro de téléphone</label>
           <label for="icon_prefix">Numéro de téléphone</label>
         </div>
       </div>
@@ -85,13 +84,15 @@
   <div class="row">
     <div class="input-field col s3">
       <i class="material-icons prefix">event_note</i>
-      <input id="dateDebut" placeholder="Date de début" type="text" class="validate">
+      <input id="dateDebut" placeholder="Date de début" type="text" class="validate" required="required">
+      <label for="text" data-error="Erreur" data-success="Correct">Nom</label>
       <label for="icon_prefix">Date de début</label>
     </div>
   <div class="row">
-    <div class="input-field col s2">
+    <div class="input-field col s3">
       <i class="material-icons prefix">update</i>
-      <input id="nNuits" placeholder="Nombre de nuits" type="text" class="validate">
+      <input id="nNuits" placeholder="Nombre de nuits" type="text" class="validate" required="required">
+      <label for="text" data-error="Erreur" data-success="Correct">Nom</label>
       <label for="nombreNuits">Nombre de nuits</label>
     </div>
   </div>
@@ -102,15 +103,13 @@
 
     <form action="#">
       <p>
-        <input class="with-gap" name="groupe 1" type="radio" id="loisir" checked="checked" />
+        <input class="with-gap" name="groupe 1" type="radio" id="loisir" checked="checked"/>
         <label for="loisir">Loisir</label>
       </p>
-
       <p>
-        <input class="with-gap" name="groupe 1" type="radio" id="pro" />
+        <input class="with-gap" name="groupe 1" type="radio" id="pro"/>
         <label for="pro">Professionnel</label>
       </p>
-
     </form>
     <br>
 
@@ -118,22 +117,22 @@
 <!-- checkbox case options -->
 <p class="coord">Souhaitez-vous des options ?</p>
 
-  <form action="#" class="check">
+  <form action="#" class="check" id="truc">
     <p>
       <input type="checkbox" class="filled-in" id="parking" />
-      <label for="parking">Parking (+ 5 € par jour)</label>
+      <label for="parking">Parking : + 5 € par jour (petit prix, car situé à 10 km de la maison)</label>
     </p>
     <p>
       <input type="checkbox" class="filled-in" id="animal" />
-      <label for="animal">Animal (+ 5 € par jour)</label>
+      <label for="animal">Animal : + 10 € par jour (interdit aux lions, requins et gnous)</label>
     </p>
     <p>
       <input type="checkbox" class="filled-in" id="parapluie" />
-      <label for="parapluie">Parapluie (+ 5 € par jour)</label>
+      <label for="parapluie">Parapluie : + 5 € par jour (parfois très utile ici !)</label>
     </p>
     <p>
       <input type="checkbox" class="filled-in" id="fumeur" />
-      <label for="fumeur">Fumeur (accès terrasse)</label>
+      <label for="fumeur">Fumeur (accès à la terrasse, située en partie privée)</label>
     </p>
 
   </form>

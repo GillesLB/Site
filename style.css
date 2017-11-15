@@ -14,6 +14,7 @@ b
 {
   font-size: 10px;
 }
+
 .galerie
 {
   display: none;
@@ -36,13 +37,13 @@ b
     height: auto;
 }
 
-
 .materialboxed
 {
   max-width: 90%;
 }
 }
 
+/* site tablette */
 @media screen and (max-width: 976px)
 {
 .galery
@@ -51,19 +52,7 @@ b
 }
 }
 
-
-
-
-
-
-
-.actuel
-{
-  background: #8bc34a;
-}
-
-
-
+/* site ordinateur */
 
 b
 {
@@ -94,6 +83,7 @@ body
   text-shadow: 10px;
   text-align: center;
 }
+
 #maison
 {
   margin-right: 10px;
@@ -116,13 +106,10 @@ body
   justify-content: center;
 }
 
-/*.check
+.actuel
 {
-display: flex;
-align-items: center;
-justify-content: left;
-margin: 10px;
-}*/
+  background: #8bc34a;
+}
 
 .langue
 {
@@ -133,7 +120,6 @@ margin: 10px;
 {
   display: flex;
   margin: 10px;
-  align-items: center;
   justify-content: center;
 }
 

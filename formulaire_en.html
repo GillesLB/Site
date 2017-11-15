@@ -3,7 +3,7 @@
 <html>
 
   <head>
-    <title>Formulaire à remplir</title>
+    <title>Form to fill</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="style.css" />
       <!--Import Google Icon Font-->
@@ -23,14 +23,14 @@
       <a href="index.html" class="brand-logo"><i class="material-icons">home</i></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="maison_en.html">Maison</a></li>
-        <li><a href="region_en.html">Région</a></li>
-        <li><a href="formulaire_en.html" class="actuel">Formulaire</a></li>
+        <li><a href="maison_en.html">House</a></li>
+        <li><a href="region_en.html">Region</a></li>
+        <li><a href="formulaire_en.html" class="actuel">Form</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a class="waves-effect" href="maison_en.html">Maison</a></li>
-        <li><a class="waves-effect" href="region_en.html">Région</a></li>
-        <li><a class="waves-effect" href="formulaire_en.html" class="actuel">Formulaire</a></li>
+        <li><a class="waves-effect" href="maison_en.html">House</a></li>
+        <li><a class="waves-effect" href="region_en.html">Region</a></li>
+        <li><a class="waves-effect" href="formulaire_en.html" class="actuel">Form</a></li>
       </ul>
     </div>
   </nav>
@@ -42,29 +42,29 @@
 </div>
 
 <!-- formulaire d'identité -->
-<h4 class="pres"> YES !! Afin de pouvoir réserver la maison, merci de bien vouloir remplir ce formulaire</h4>
+<h4 class="pres"> In order to reserve this house, please fill this form :</h4>
 <br>
-<p class="coord">Quelles sont vos coordonnées ?</p>
+<p class="coord">Identity</p>
 <div class="row">
     <form name="saisie" class="col s12" action="test.html">
       <div class="row">
         <div class="input-field col s6">
           <i class="material-icons prefix">person_pin</i>
-          <input id="nom" placeholder="Nom" type="text" class="validate">
-          <label for="icon_prefix">Nom</label>
+          <input id="name" placeholder="Name" type="text" class="validate" required="required">
+          <label for="icon_prefix">Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
           <i class="material-icons prefix">person_pin</i>
-          <input id="prenom" placeholder="Prénom" type="text" class="validate">
-          <label for="icon_prefix">Prénom</label>
+          <input id="first_name" placeholder="First name" type="text" class="validate" required="required">
+          <label for="icon_prefix">First Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s4">
           <i class="material-icons prefix">email</i>
-          <input id="email" placeholder="E-mail" type="email" class="validate">
+          <input id="email" placeholder="E-mail" type="email" class="validate" required="required">
           <label for="email" data-error="wrong" data-success="right">E-mail</label>
           <label for="icon_prefix">E-mail</label>
         </div>
@@ -72,43 +72,45 @@
       <div class="row">
         <div class="input-field col s4">
           <i class="material-icons prefix">smartphone</i>
-          <input id="nTelephone" placeholder="Numéro de téléphone" type="text" class="validate">
-          <label for="icon_prefix">Numéro de téléphone</label>
+          <input id="nTelephone" placeholder="Phone number" type="text" class="validate" required="required">
+          <label for="icon_prefix">Phone number</label>
         </div>
       </div>
     </form>
   </div>
 
 <!-- dates demandées -->
-<p class="coord">Quand souhaitez-vous venir et pour combien de temps ?</p>
+<p class="coord">When would you come and how long ?</p>
 
   <div class="row">
     <div class="input-field col s3">
       <i class="material-icons prefix">event_note</i>
-      <input id="dateDebut" placeholder="Date de début" type="text" class="validate">
-      <label for="icon_prefix">Date de début</label>
+      <input id="dateDebut" placeholder="First day" type="text" class="validate" required="required">
+      <label for="text" data-error="wrong" data-success="right">Nom</label>
+      <label for="icon_prefix">First day</label>
     </div>
   <div class="row">
     <div class="input-field col s2">
       <i class="material-icons prefix">update</i>
-      <input id="nNuits" placeholder="Nombre de nuits" type="text" class="validate">
-      <label for="nombreNuits">Nombre de nuits</label>
+      <input id="nNuits" placeholder="Nights" type="text" class="validate" required="required">
+      <label for="text" data-error="wrong" data-success="right">Nom</label>
+      <label for="nombreNuits">Nights</label>
     </div>
   </div>
 
 <!-- checkbox -->
 <!-- checkbox radio loisir / pro -->
-<p class="coord">Quelle est la nature de votre séjour ?</p>
+<p class="coord">Why would you come ?</p>
 
     <form action="#">
       <p>
         <input class="with-gap" name="groupe 1" type="radio" id="loisir" checked="checked" />
-        <label for="loisir">Loisir</label>
+        <label for="loisir">Holidays</label>
       </p>
 
       <p>
         <input class="with-gap" name="groupe 1" type="radio" id="pro" />
-        <label for="pro">Professionnel</label>
+        <label for="pro">Job</label>
       </p>
 
     </form>
@@ -116,53 +118,53 @@
 
 
 <!-- checkbox case options -->
-<p class="coord">Souhaitez-vous des options ?</p>
+<p class="coord">Do you wish some supplies ?</p>
 
   <form action="#" class="check">
     <p>
       <input type="checkbox" class="filled-in" id="parking" />
-      <label for="parking">Parking (+ 5 € par jour)</label>
+      <label for="parking">Car park (+ 5 € per day)</label>
     </p>
     <p>
       <input type="checkbox" class="filled-in" id="animal" />
-      <label for="animal">Animal (+ 5 € par jour)</label>
+      <label for="animal">Animal (+ 5 € per day)</label>
     </p>
     <p>
       <input type="checkbox" class="filled-in" id="parapluie" />
-      <label for="parapluie">Parapluie (+ 5 € par jour)</label>
+      <label for="parapluie">Umbrella (+ 5 € per day)</label>
     </p>
     <p>
       <input type="checkbox" class="filled-in" id="fumeur" />
-      <label for="fumeur">Fumeur (accès terrasse)</label>
+      <label for="fumeur">Smoking area (roof acces)</label>
     </p>
 
   </form>
   <br/>
 
   <!-- 2 combo box -->
-<p class="coord">Choisissez le nombre de personne :</p>
+<p class="coord">How many people :</p>
 
 <div>
   <!-- Dropdown Trigger nombre de personnes -->
-  <a class="dropdown-button btn" data-beloworigin="true" href="#" data-activates="dropdown1">Nombre de personne<i class="material-icons right">arrow_drop_down</i></a>
+  <a class="dropdown-button btn" data-beloworigin="true" href="#" data-activates="dropdown1">How many people<i class="material-icons right">arrow_drop_down</i></a>
   <!-- Dropdown Structure -->
   <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!"><i class="material-icons">looks_one</i>une personne<br>(prix de base)</a></li>
+    <li><a href="#!"><i class="material-icons">looks_one</i>one person<br>(base)</a></li>
     <li class="divider"></li>
-    <li><a href="#!"><i class="material-icons">looks_two</i>deux personnes<br>(base + 50 €)</a></li>
+    <li><a href="#!"><i class="material-icons">looks_two</i>two people<br>(base + 50 €)</a></li>
     <li class="divider"></li>
-    <li><a href="#!"><i class="material-icons">looks_3</i>trois personnes<br>(base + 80 €)</a></li>
+    <li><a href="#!"><i class="material-icons">looks_3</i>three people<br>(base + 80 €)</a></li>
     <li class="divider"></li>
-    <li><a href="#!"><i class="material-icons">looks_4</i>quatre personnes<br><b>(maximum)</b>  (base + 100 €)</a></li>
+    <li><a href="#!"><i class="material-icons">looks_4</i>four people<br><b>(maximum)</b>  (base + 100 €)</a></li>
   </ul>
   <br>
 </div>
 
-<p class="coord">Indiquez votre région d'origine :</p>
+<p class="coord">Where do you come from</p>
 
 <div>
   <!-- Dropdown Trigger région d'origine -->
-  <a class="dropdown-button btn" data-beloworigin="true" href="#" data-activates="dropdown2">Région d'origine (facultatif)<i class="material-icons right">arrow_drop_down</i></a>
+  <a class="dropdown-button btn" data-beloworigin="true" href="#" data-activates="dropdown2">Origin (optional)<i class="material-icons right">arrow_drop_down</i></a>
   <!-- Dropdown Structure -->
   <ul id="dropdown2" class="dropdown-content">
     <li><a href="#!">Auvergne-Rhône-Alpes</a></li>
@@ -193,20 +195,20 @@
     <li class="divider"></li>
     <li><a href="#!">DOM / TOM</a></li>
     <li class="divider"></li>
-    <li><a href="#!">Etranger</a></li>
+    <li><a href="#!">Foreign country</a></li>
   </ul>
 </div>
 <br>
 
 <!-- estimation du prix -->
-  <P class="coord">Récapitulatif de la demande :</p>
+  <P class="coord">Sum up of the stay :</p>
 
-    <a class="waves-effect waves-light btn"><i class="material-icons right">list</i>recapitulatif</a>
+    <a class="waves-effect waves-light btn"><i class="material-icons right">list</i>sum up</a>
     <br>
   <p> </p><br>
 
 <!-- bouton d'envoi -->
-    <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Valider la commande<i class="material-icons right">send</i>
+    <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Confirm<i class="material-icons right">send</i>
     <form method="post" action="index.html"></form>
     </button>
 
