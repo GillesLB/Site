@@ -1,0 +1,174 @@
+@media screen and (max-width: 480px)
+{
+body
+{
+  font-size: 90%;
+}
+
+b
+{
+  color:red;
+}
+
+.descrip
+{
+  font-size: 10px;
+}
+.galerie
+{
+  display: none;
+}
+
+.langue
+{
+  display: none;
+}
+
+.video
+{
+  display:none;
+  max-width: 50%;
+}
+
+.collection-item
+{
+  max-width: 50%;
+    height: auto;
+}
+
+
+.materialboxed
+{
+  max-width: 90%;
+}
+}
+
+@media screen and (max-width: 976px)
+{
+.galery
+{
+  display: none;
+}
+}
+
+
+
+
+
+
+
+.actuel
+{
+  background: #8bc34a;
+}
+
+
+
+
+b
+{
+  color:red;
+}
+p
+{
+  color:#558b2f;
+}
+
+body
+{
+  background-color: #f1f8e9;
+}
+
+#fond-index
+{
+ background-image:url(images/vague.jpg) !important;
+ background-size:cover;
+ margin:0;
+}
+
+#centre, h5
+{
+  font-size: 30px;
+  font-weight: bold;
+  color: green;
+  text-shadow: 10px;
+  text-align: center;
+}
+#maison
+{
+  margin-right: 10px;
+}
+
+#video
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+#gal
+{
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/*.check
+{
+display: flex;
+align-items: center;
+justify-content: left;
+margin: 10px;
+}*/
+
+.langue
+{
+  color: #558b2f;
+}
+
+.galerie
+{
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu
+{
+  align: center;
+  vertical-align: : middle;
+}
+
+.coord
+{
+  color: green;
+}
+
+.collection
+{
+  margin: auto;
+  width:50%;
+  text-align: center;
+}
+
+.nav-wrapper
+{
+  background-color: #689f38;
+}
+
+.carousel .carousel-item
+{
+  width:400px !important;
+}
+
+.pres
+{
+  text-align: center;
+  font-weight: bold;
+  align: center;
+  color:#558b2f;
+}
