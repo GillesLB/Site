@@ -5,7 +5,9 @@
   <head>
     <title>Formulaire à remplir</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" href="style.css" />
+      <link rel="stylesheet" href="style.css" />
+      <!-- Import Calendar -->
+      <link rel="stylesheet" href="calendrier.css">
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
@@ -79,23 +81,18 @@
   </div>
 
 <!-- dates demandées -->
-<p class="coord">Quand souhaitez-vous venir et pour combien de temps ?</p>
-
-  <div class="row">
-    <div class="input-field col s3">
-      <i class="material-icons prefix">event_note</i>
-      <input id="dateDebut" placeholder="Date de début" type="text" class="validate" required="required">
-      <label for="text" data-error="Erreur" data-success="Correct">Nom</label>
-      <label for="icon_prefix">Date de début</label>
-    </div>
-  <div class="row">
-    <div class="input-field col s3">
-      <i class="material-icons prefix">update</i>
-      <input id="nNuits" placeholder="Nombre de nuits" type="text" class="validate" required="required">
-      <label for="text" data-error="Erreur" data-success="Correct">Nom</label>
-      <label for="nombreNuits">Nombre de nuits</label>
-    </div>
-  </div>
+<form name="saisie" class="col s12" method="post" action="traitement.php">
+  <div class="input-field col s4">
+            <p>Date d'arrivée souhaitée *</p>
+            <i class="material-icons prefix">perm_contact_calendar</i>
+            <input id='arrive' type="text" class="datepicker" required="required"
+          <div class="input-field col s4">
+            <p>Date de départ souhaitée *</p>
+            <i class="material-icons prefix">perm_contact_calendar</i>
+            <input id='depart' type="text" class="datepicker" required="required">
+          </div>
+      </div>
+</form>
 
 <!-- checkbox -->
 <!-- checkbox radio loisir / pro -->
@@ -246,6 +243,22 @@
             $('.parallax').parallax();
           });
       </script>
+
+      <!-- calendrier du formulaire -->
+      <script>
+          $(document).ready(function () {
+            $('select').material_select();
+          });
+
+          $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15, // Creates a dropdown of 15 years to control year,
+            today: 'Aujourdhui',
+            clear: 'Annuler',
+            close: 'Ok',
+            closeOnSelect: false // Close upon selecting a date,
+          });
+        </script>
 
       <script>
         function recupDonnees() {
