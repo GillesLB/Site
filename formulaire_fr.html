@@ -48,17 +48,17 @@
 <br>
 <p class="coord">Quelles sont vos coordonnées ?</p>
 <div class="row">
-    <form name="saisie" class="col s12" method="post" action="traitement.php">
+    <form name="saisie1" class="col s12" method="post" action="reservationServlet">
       <div class="row">
         <div class="input-field col s5">
           <i class="material-icons prefix">person_pin</i>
-          <input id="nom" placeholder="Nom" type="text" class="validate" required="required">
+          <input id="nom" name="nom" placeholder="Nom" type="text" class="validate" required="required">
           <label for="text" data-error="Erreur" data-success="Correct">Nom</label>
           <label for="icon_prefix">Nom</label>
         </div>
         <div class="input-field col s5">
           <i class="material-icons prefix">person_pin</i>
-          <input id="prenom" placeholder="Prénom" type="text" class="validate" required="required">
+          <input id="prenom" name="prenom" placeholder="Prénom" type="text" class="validate" required="required">
           <label for="text" data-error="Erreur" data-success="Correct">Prénom</label>
           <label for="icon_prefix">Prénom</label>
         </div>
@@ -66,31 +66,37 @@
       <div class="row">
         <div class="input-field col s4">
           <i class="material-icons prefix">email</i>
-          <input id="email" placeholder="E-mail" type="email" class="validate" required="required">
+          <input id="email" name="email" placeholder="E-mail" type="email" class="validate" required="required">
           <label for="email" data-error="Erreur" data-success="Correct">E-mail</label>
           <label for="icon_prefix">E-mail</label>
         </div>
         <div class="input-field col s4">
           <i class="material-icons prefix">smartphone</i>
-          <input id="nTelephone" placeholder="Numéro de téléphone" type="text" class="validate" required="required">
+          <input id="nTelephone" name="nTelephone" placeholder="Numéro de téléphone" type="text" class="validate" required="required">
           <label for="text" data-error="Erreur" data-success="Correct">Numéro de téléphone</label>
           <label for="icon_prefix">Numéro de téléphone</label>
         </div>
       </div>
+      <button class="btn waves-effect waves-light btn-large" type="submit" name="saisie1">Valider la commande
+      <i class="material-icons right">send</i>
+    </button>
     </form>
   </div>
 
 <!-- dates demandées -->
-<form name="saisie" class="col s12" method="post" action="traitement.php">
-  <div class="input-field col s4">
+	<form name="saisie2" class="col s12" method="post" action="reservationServlet">
+  		<div class="input-field col s4">
             <p>Date d'arrivée souhaitée *</p>
             <i class="material-icons prefix">perm_contact_calendar</i>
-            <input id='arrive' type="text" class="datepicker" required="required"
+            <input id='arrive' type="text" class="datepicker" required="required">
           <div class="input-field col s4">
             <p>Date de départ souhaitée *</p>
             <i class="material-icons prefix">perm_contact_calendar</i>
             <input id='depart' type="text" class="datepicker" required="required">
           </div>
+          <button class="btn waves-effect waves-light btn-large" type="submit" name="saisie2">Valider la commande
+      <i class="material-icons right">send</i>
+    </button>
       </div>
 </form>
 
@@ -98,7 +104,7 @@
 <!-- checkbox radio loisir / pro -->
 <p class="coord">Quelle est la nature de votre séjour ?</p>
 
-    <form action="#">
+    <form name="saisieRadio" action="reservationServlet">
       <p>
         <input class="with-gap" name="groupe 1" type="radio" id="loisir" checked="checked"/>
         <label for="loisir">Loisir</label>
@@ -107,14 +113,17 @@
         <input class="with-gap" name="groupe 1" type="radio" id="pro"/>
         <label for="pro">Professionnel</label>
       </p>
+      <button class="btn waves-effect waves-light btn-large" type="submit" name="saisieRadio">Valider la commande
+      <i class="material-icons right">send</i>
+    </button>
     </form>
-    <br>
+    <br/>
 
 
 <!-- checkbox case options -->
 <p class="coord">Souhaitez-vous des options ?</p>
 
-  <form action="#" class="check" id="truc">
+  <form name="saisieCheck" action="#" class="check" id="truc">
     <p>
       <input type="checkbox" class="filled-in" id="parking" />
       <label for="parking">Parking : + 5 € par jour (petit prix, car situé à 10 km de la maison)</label>
@@ -202,8 +211,9 @@
   <p> </p><br>
 
 <!-- bouton d'envoi -->
-    <button class="btn waves-effect waves-light btn-large" type="submit" name="action">Valider la commande<i class="material-icons right">send</i>
-    <form method="post" action="index.html"></form>
+    
+    
+    <button class="btn waves-effect waves-light btn-large" type="submit" name="envoiRes">Valider la commande<i class="material-icons right">send</i>
     </button>
 
 <!-- javascript -->
