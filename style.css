@@ -1,3 +1,5 @@
+
+/* site smartphone */
 @media screen and (max-width: 480px)
 {
 body
@@ -53,11 +55,11 @@ b
 }
 
 /* site ordinateur */
-
 b
 {
   color:red;
 }
+
 p
 {
   color:#558b2f;
@@ -80,13 +82,13 @@ body
   font-size: 30px;
   font-weight: bold;
   color: green;
-  text-shadow: 10px;
   text-align: center;
 }
 
 #maison
 {
   margin-right: 10px;
+  float: left;
 }
 
 #video
@@ -125,8 +127,8 @@ body
 
 .menu
 {
-  align: center;
-  vertical-align: : middle;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .coord
@@ -155,6 +157,5 @@ body
 {
   text-align: center;
   font-weight: bold;
-  align: center;
   color:#558b2f;
 }

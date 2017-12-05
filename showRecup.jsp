@@ -11,14 +11,14 @@
 <body>
 	<% Recup recup = (Recup) request.getAttribute("recup");%>
 	
-	// affiche les données récupérées
+	<!-- affiche les données récupérées -->
 	<h2><u>Résumé des coordonnées</u></h2><br/>
 	<p>Nom : <b><%=recup.getNom() %></b></p>
 	<p>Prénom : <b><%=recup.getPrenom() %></b></p>
 	<p>E-mail : <b><%=recup.getEmail() %></b></p>
 	<p>Numéro de téléphone : <b><%=recup.getnTelephone() %></b></p>
-	
-	<p>Nature du séjour : ... </p>
+	<p>Nombre de personne : <b><%=recup.getNbPersonne() %></b></p>
+	<p>Région d'origine : <b><%=recup.getRegion() %></b></p>
 	
 </body>
 </html>

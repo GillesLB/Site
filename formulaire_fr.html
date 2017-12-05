@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
 
   <head>
     <title>Formulaire à remplir</title>
@@ -11,15 +11,13 @@
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="all"/>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
   <body>
-
-<!-- barre de navigation -->
-
+  <!-- barre de navigation -->
   <nav>
     <div class="nav-wrapper">
       <a href="index.html" class="brand-logo"><i class="material-icons">home</i></a>
@@ -37,30 +35,29 @@
     </div>
   </nav>
 
-
-<div class="parallax-container">
-  <div class="parallax"><img src="images/vague.jpg">
+  <div class="parallax-container">
+  	<div class="parallax"><img src="images/vague.jpg" alt="vague sur l'ocean">
+ 	  </div>
   </div>
-</div>
 
 <!-- formulaire d'identité -->
 <h4 class="pres">Afin de pouvoir réserver la maison, merci de bien vouloir remplir ce formulaire</h4>
 <br>
+
 <p class="coord">Quelles sont vos coordonnées ?</p>
-<div class="row">
-    <form name="saisie1" class="col s12" method="post" action="reservationServlet">
+    <form name="saisie" class="col s12" method="post" action="reservationServlet">
       <div class="row">
         <div class="input-field col s5">
           <i class="material-icons prefix">person_pin</i>
           <input id="nom" name="nom" placeholder="Nom" type="text" class="validate" required="required">
-          <label for="text" data-error="Erreur" data-success="Correct">Nom</label>
-          <label for="icon_prefix">Nom</label>
+          <label for="nom" data-error="Erreur" data-success="Correct">Nom</label>
+          <label>Nom</label>
         </div>
         <div class="input-field col s5">
           <i class="material-icons prefix">person_pin</i>
           <input id="prenom" name="prenom" placeholder="Prénom" type="text" class="validate" required="required">
-          <label for="text" data-error="Erreur" data-success="Correct">Prénom</label>
-          <label for="icon_prefix">Prénom</label>
+          <label for="prenom" data-error="Erreur" data-success="Correct">Prénom</label>
+          <label>Prénom</label>
         </div>
       </div>
       <div class="row">
@@ -68,63 +65,46 @@
           <i class="material-icons prefix">email</i>
           <input id="email" name="email" placeholder="E-mail" type="email" class="validate" required="required">
           <label for="email" data-error="Erreur" data-success="Correct">E-mail</label>
-          <label for="icon_prefix">E-mail</label>
+          <label>E-mail</label>
         </div>
         <div class="input-field col s4">
           <i class="material-icons prefix">smartphone</i>
           <input id="nTelephone" name="nTelephone" placeholder="Numéro de téléphone" type="text" class="validate" required="required">
-          <label for="text" data-error="Erreur" data-success="Correct">Numéro de téléphone</label>
-          <label for="icon_prefix">Numéro de téléphone</label>
+          <label for="nTelephone" data-error="Erreur" data-success="Correct">Numéro de téléphone</label>
+          <label>Numéro de téléphone</label>
         </div>
       </div>
-      <button class="btn waves-effect waves-light btn-large" type="submit" name="saisie1">Valider la commande
-      <i class="material-icons right">send</i>
-    </button>
-    </form>
-  </div>
 
-<!-- dates demandées -->
-	<form name="saisie2" class="col s12" method="post" action="reservationServlet">
-  		<div class="input-field col s4">
-            <p>Date d'arrivée souhaitée *</p>
-            <i class="material-icons prefix">perm_contact_calendar</i>
-            <input id='arrive' type="text" class="datepicker" required="required">
-          <div class="input-field col s4">
-            <p>Date de départ souhaitée *</p>
-            <i class="material-icons prefix">perm_contact_calendar</i>
-            <input id='depart' type="text" class="datepicker" required="required">
-          </div>
-          <button class="btn waves-effect waves-light btn-large" type="submit" name="saisie2">Valider la commande
-      <i class="material-icons right">send</i>
-    </button>
+    <!-- dates demandées -->
+  	<div class="input-field col s4">
+      <p>Date d'arrivée souhaitée *</p>
+      <i class="material-icons prefix">perm_contact_calendar</i>
+      <input id='arrive' type="text" class="datepicker" required="required">
+      <div class="input-field col s4">
+        <p>Date de départ souhaitée *</p>
+        <i class="material-icons prefix">perm_contact_calendar</i>
+        <input id='depart' type="text" class="datepicker" required="required">
       </div>
-</form>
+    </div>
 
 <!-- checkbox -->
 <!-- checkbox radio loisir / pro -->
 <p class="coord">Quelle est la nature de votre séjour ?</p>
 
-    <form name="saisieRadio" action="reservationServlet">
       <p>
-        <input class="with-gap" name="groupe 1" type="radio" id="loisir" checked="checked"/>
+        <input class="with-gap" name="groupeRadio" type="radio" id="loisir" checked="checked" value="loisir"/>
         <label for="loisir">Loisir</label>
       </p>
       <p>
-        <input class="with-gap" name="groupe 1" type="radio" id="pro"/>
+        <input class="with-gap" name="groupeRadio" type="radio" id="pro" value="pro"/>
         <label for="pro">Professionnel</label>
       </p>
-      <button class="btn waves-effect waves-light btn-large" type="submit" name="saisieRadio">Valider la commande
-      <i class="material-icons right">send</i>
-    </button>
-    </form>
-    <br/>
-
+     <br>
 
 <!-- checkbox case options -->
 <p class="coord">Souhaitez-vous des options ?</p>
 
-  <form name="saisieCheck" action="#" class="check" id="truc">
-    <p>
+   <p>
       <input type="checkbox" class="filled-in" id="parking" />
       <label for="parking">Parking : + 5 € par jour (petit prix, car situé à 10 km de la maison)</label>
     </p>
@@ -140,81 +120,61 @@
       <input type="checkbox" class="filled-in" id="fumeur" />
       <label for="fumeur">Fumeur (accès à la terrasse, située en partie privée)</label>
     </p>
-
-  </form>
-  <br/>
+  <br>
 
   <!-- 2 combo box -->
 <p class="coord">Choisissez le nombre de personne :</p>
 
-<div>
-  <!-- Dropdown Trigger nombre de personnes -->
-  <a class="dropdown-button btn" data-beloworigin="true" href="#" data-activates="dropdown1">Nombre de personne<i class="material-icons right">arrow_drop_down</i></a>
-  <!-- Dropdown Structure -->
-  <ul id="dropdown1" class="dropdown-content">
-    <li><a href="#!"><i class="material-icons">looks_one</i>une personne<br>(prix de base)</a></li>
-    <li class="divider"></li>
-    <li><a href="#!"><i class="material-icons">looks_two</i>deux personnes<br>(base + 50 €)</a></li>
-    <li class="divider"></li>
-    <li><a href="#!"><i class="material-icons">looks_3</i>trois personnes<br>(base + 80 €)</a></li>
-    <li class="divider"></li>
-    <li><a href="#!"><i class="material-icons">looks_4</i>quatre personnes<br><b>(maximum)</b>  (base + 100 €)</a></li>
-  </ul>
+<div class="input-field col s4">
+    <select name="nbPersonne">
+      <option value="" disabled selected>Nombre de personne</option>
+      <option value="1 personne">une personne (prix de base)</option>
+      <option value="2 personnes">deux personnes (base + 50 €)</option>
+      <option value="3 personnes">trois personnes (base + 80 €)</option>
+      <option value="4 personnes (maximum)">quatre personnes (maximum !) (base + 100 €)</option>
+	</select>
+    <label>Nombre de personne</label>
+  </div>
   <br>
-</div>
 
 <p class="coord">Indiquez votre région d'origine :</p>
 
-<div>
-  <!-- Dropdown Trigger région d'origine -->
-  <a class="dropdown-button btn" data-beloworigin="true" href="#" data-activates="dropdown2">Région d'origine (facultatif)<i class="material-icons right">arrow_drop_down</i></a>
   <!-- Dropdown Structure -->
-  <ul id="dropdown2" class="dropdown-content">
-    <li><a href="#!">Auvergne-Rhône-Alpes</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Bourgogne-Franche-Comté</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Bretagne</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Centre-Val de Loire</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Corse</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Grand Est</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Hauts-de-France</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Île-de-France</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Normandie</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Nouvelle-Aquitaine</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Occitanie</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Pays de la Loire</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Provence-Alpes-Côte d'Azur</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">DOM / TOM</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">Etranger</a></li>
-  </ul>
-</div>
-<br>
+	<div class="input-field col s4">
+    <select name="region">
+      <option value="" disabled selected>Région d'origine</option>
+      <option value="Auvergne-Rhone-Alpes">Auvergne-Rhône-Alpes</option>
+      <option value="Bourgogne-Franche-Comte">Bourgogne-Franche-Comté</option>
+      <option value="Bretagne">Bretagne</option>
+      <option value="Centre-Val de Loire">Centre-Val de Loire</option>
+      <option value="Corse">Corse</option>
+      <option value="Grand Est">Grand Est</option>
+      <option value="Hauts-de-France">Hauts-de-France</option>
+      <option value="Ile-de-France">Île-de-France</option>
+      <option value="Normandie">Normandie</option>
+      <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
+      <option value="Occitanie">Occitanie</option>
+      <option value="Pays de la Loire">Pays de la Loire</option>
+      <option value="Provence-Alpes-Cote d'Azur">Provence-Alpes-Côte d'Azur</option>
+      <option value="DOM / TOM">DOM / TOM</option>
+      <option value="Etranger">Etranger</option>
+      </select>
+    <label>Région</label>
+  </div>
+  <br>
 
 <!-- estimation du prix -->
   <P class="coord">Récapitulatif de la demande :</p>
-
-    <a class="waves-effect waves-light btn"><i class="material-icons right">list</i>recapitulatif</a>
-    <br>
-  <p> </p><br>
+  <a class="waves-effect waves-light btn"><i class="material-icons right">list</i>recapitulatif</a>
+  <br><br>
 
 <!-- bouton d'envoi -->
-    
-    
-    <button class="btn waves-effect waves-light btn-large" type="submit" name="envoiRes">Valider la commande<i class="material-icons right">send</i>
-    </button>
+  <button class="btn waves-effect waves-light btn-large" type="submit" name="saisie">Valider la réservation
+  <i class="material-icons right">send</i>
+  </button>
+
+<!-- fermeture du formulaire -->
+</form>
 
 <!-- javascript -->
     <script>
@@ -238,8 +198,8 @@
       </script>
 
       <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="js/materialize.min.js"></script>
 
       <!-- side bar mobile -->
       <script>
@@ -270,14 +230,6 @@
           });
         </script>
 
-      <script>
-        function recupDonnees() {
-        var nom = document.getElementById("nom").value;
-        var prenom = document.getElementById("prenom").value;
-        var email = document.getElementById("email").value;
-        var nTelephone = document.getElementById("nTelephone").value;
-        }
-      </script>
-
   </body>
+
 </html>
