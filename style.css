@@ -9,7 +9,13 @@ body
 
 b
 {
-  color:red;
+  color:black;
+}
+
+#bann
+{
+  width: 700px;
+  width: 100%;
 }
 
 .descrip
@@ -55,33 +61,41 @@ b
 }
 
 /* site ordinateur */
+table .bordure
+{
+  border-width:1px;
+  border-style:solid;
+  border-color:black;
+  width:50%;
+}
+
+tr .fond
+{
+  color: red;
+}
+
 b
 {
-  color:red;
+  color: black;
 }
 
 p
 {
-  color:#558b2f;
+  color: black;
 }
 
 body
 {
-  background-color: #f1f8e9;
+  background-color: #ffffff;
 }
 
-#fond-index
-{
- background-image:url(images/vague.jpg) !important;
- background-size:cover;
- margin:0;
-}
 
-#centre, h5
+
+#centre
 {
   font-size: 30px;
   font-weight: bold;
-  color: green;
+  color: black;
   text-align: center;
 }
 
@@ -110,12 +124,12 @@ body
 
 .actuel
 {
-  background: #8bc34a;
+  background: #ffffff;
 }
 
 .langue
 {
-  color: #558b2f;
+  color: black;
 }
 
 .galerie
@@ -131,9 +145,15 @@ body
   vertical-align: middle;
 }
 
+#tit
+{
+  text-align: center;
+  color: black;
+}
+
 .coord
 {
-  color: green;
+  color: black;
 }
 
 .collection
@@ -145,7 +165,13 @@ body
 
 .nav-wrapper
 {
-  background-color: #689f38;
+  background-color: #ffca28;
+  color: black !important;
+}
+
+.right
+{
+  align-items: flex-end;
 }
 
 .carousel .carousel-item
@@ -157,5 +183,5 @@ body
 {
   text-align: center;
   font-weight: bold;
-  color:#558b2f;
+  color: black;
 }

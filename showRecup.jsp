@@ -1,43 +1,120 @@
 <%@ page import="siteMaisonHote.Recup"%>
 
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    
-    	
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Formulaire de réservation</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Formulaire de rÃ©servation</title>
 </head>
 <body style="background-color:#f1f8e9">
 	<% Recup recup = (Recup) request.getAttribute("recup");%>
-	
-	<!-- affiche les données récupérées -->
-	<h2><u>Résumé des coordonnées</u></h2><br/>
+	<% int base = 100; %>
+	<% int prix = 0; %>
+
+	<!-- affiche les donnÃ©es rÃ©cupÃ©rÃ©es -->
+	<h2><u>RÃ©sumÃ© des coordonnÃ©es</u></h2><br/>
+	<!--
+	<table class="striped">
+  	<tr class="fond">
+  	  <th class="fond">Nom</th>
+      <th>PrÃ©nom</th>
+      <th>E-mail</th>
+      <th>TÃ©lÃ©phone</th>
+    </tr>
+      <tr>
+    	<td><b><%=recup.getNom() %></b></td>
+    	<td><b><%=recup.getPrenom() %></b></td>
+		<td><b><%=recup.getEmail() %></td>
+    	<td><b><%=recup.getnTelephone() %></td>
+      </tr>
+     </table>
+     <br>
+      <table class="bordure">
+      <tr class="fond">
+      	<th>Nombre de personne</th>
+  	    <th>Nature du sÃ©jour</th>
+        <th>ArrivÃ©e</th>
+ 	    <th>Nombre de nuits</th>
+  	    <th>Parking</th>
+  	    <th>Animal</th>
+  	    <th>Parapluie</th>
+   	    <th>Fumeur</th>
+   	</tr>
+  	<tr>
+    	<td><b><%=recup.getGroupeRadio() %></td>
+    	<td><b><%=recup.getGroupeRadio() %></td>
+    	<td><b><%=recup.getArrivee() %></td>
+    	<td><b><%=recup.getNuits() %></td>
+		<td><b><% if (recup.getParking() == null)
+		out.println("non");
+		else {
+		base += 5;
+		out.println("oui");
+		} %></b></td>
+    	<td><b><% if (recup.getAnimal() == null)
+		out.println("non");
+		else {
+		base += 10;
+		out.println("oui");
+		} %></b></td>
+    	<td><b><% if (recup.getParapluie() == null)
+		out.println("non");
+		else {
+		base += 5;
+		out.println("oui");
+		} %></b></td>
+    	<td><b><% if (recup.getFumeur() == null)
+		out.println("non");
+		else
+		out.println("oui"); %></b></td>
+  </tr>
+</table> -->
+
 	<p>Nom : <b><%=recup.getNom() %></b></p>
-	<p>Prénom : <b><%=recup.getPrenom() %></b></p>
+	<p>PrÃ©nom : <b><%=recup.getPrenom() %></b></p>
 	<p>E-mail : <b><%=recup.getEmail() %></b></p>
-	<p>Numéro de téléphone : <b><%=recup.getnTelephone() %></b></p>
-	<p>Nature du séjour : <b><%=recup.getGroupeRadio() %></b></p>
-	<p>Parking : <b><% if (recup.getParking() == null) 
+	<p>NumÃ©ro de tÃ©lÃ©phone : <b><%=recup.getnTelephone() %></b></p>
+	<p>Nature du sÃ©jour : <b><%=recup.getGroupeRadio() %></b></p>
+	<p>Date arrivÃ©e : <b><%=recup.getArrivee() %></b></p>
+	<p>Nombre de nuits : <b><%=recup.getNuits() %></b></p>
+	<% int nbN = Integer.parseInt(recup.getNuits()); %>
+	<p>Parking : <b><% if (recup.getParking() == null)
 		out.println("non");
-		else
-		out.println("oui"); %></b></p>
-	<p>Animal : <b><% if (recup.getAnimal() == null) 
+		else {
+		base += 5;
+		out.println("oui");
+		} %></b></p>
+	<p>Animal : <b><% if (recup.getAnimal() == null)
 		out.println("non");
-		else
-		out.println("oui"); %></b></p>
-	<p>Parapluie : <b><% if (recup.getParapluie() == null) 
+		else {
+		base += 10;
+		out.println("oui");
+		} %></b></p>
+	<p>Parapluie : <b><% if (recup.getParapluie() == null)
 		out.println("non");
-		else
-		out.println("oui"); %></b></p>
-	<p>Fumeur : <b><% if (recup.getFumeur() == null) 
+		else {
+		base += 5;
+		out.println("oui");
+		} %></b></p>
+	<p>Fumeur : <b><% if (recup.getFumeur() == null)
 		out.println("non");
 		else
 		out.println("oui"); %></b></p>
 	<p>Nombre de personne : <b><%=recup.getNbPersonne() %></b></p>
-	<p>Région d'origine : <b><%=recup.getRegion() %></b></p>
-	
+	<% int nbP = Integer.parseInt(recup.getNbPersonne());
+		if (nbP == 2)
+			base += 50;
+		else if (nbP == 3)
+			base += 80;
+		else if(nbP == 4)
+			base += 100; %>
+	<p>RÃ©gion d'origine : <b><%=recup.getRegion() %></b></p>
+	<% prix = base * nbN; %>
+  <br>
+	<p>Le prix total sera de  <i><%=prix %></i> euros !</p>
 </body>
 </html>
