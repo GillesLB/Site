@@ -1,4 +1,4 @@
-<%@ page import="siteMaisonHote.Recup"%>
+<%@ page import="siteMaisonHote.Client"%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -11,7 +11,7 @@
 	<title>Estimation du prix du séjour</title>
 </head>
 <body style="background-color:blue">
-	<% Recup recup = (Recup) request.getAttribute("recup");%>
+	<% Client client = (Client) request.getAttribute("client");%>
 	<% int base = 100; %>
 	<% int prix = 0; %>
 
@@ -19,45 +19,45 @@
 	<h2><u>Résumé des coordonnées</u></h2><br/>
 	
 
-	<p>Nom : <b><%=recup.getNom() %></b></p>
-	<p>Prénom : <b><%=recup.getPrenom() %></b></p>
-	<p>E-mail : <b><%=recup.getEmail() %></b></p>
-	<p>Numéro de téléphone : <b><%=recup.getnTelephone() %></b></p>
-	<p>Nature du séjour : <b><%=recup.getGroupeRadio() %></b></p>
-	<p>Date arrivée : <b><%=recup.getArrivee() %></b></p>
-	<p>Nombre de nuits : <b><%=recup.getNuits() %></b></p>
-	<% int nbN = Integer.parseInt(recup.getNuits()); %>
-	<p>Parking : <b><% if (recup.getParking() == null)
+	<p>Nom : <b><%=client.getNom() %></b></p>
+	<p>Prénom : <b><%=client.getPrenom() %></b></p>
+	<p>E-mail : <b><%=client.getEmail() %></b></p>
+	<p>Numéro de téléphone : <b><%=client.getnTelephone() %></b></p>
+	<p>Nature du séjour : <b><%=client.getGroupeRadio() %></b></p>
+	<p>Date arrivée : <b><%=client.getArrivee() %></b></p>
+	<p>Nombre de nuits : <b><%=client.getNuits() %></b></p>
+	<% int nbN = Integer.parseInt(client.getNuits()); %>
+	<p>Parking : <b><% if (client.getParking() == null)
 		out.println("non");
 		else {
 		base += 5;
 		out.println("oui");
 		} %></b></p>
-	<p>Animal : <b><% if (recup.getAnimal() == null)
+	<p>Animal : <b><% if (client.getAnimal() == null)
 		out.println("non");
 		else {
 		base += 10;
 		out.println("oui");
 		} %></b></p>
-	<p>Parapluie : <b><% if (recup.getParapluie() == null)
+	<p>Parapluie : <b><% if (client.getParapluie() == null)
 		out.println("non");
 		else {
 		base += 5;
 		out.println("oui");
 		} %></b></p>
-	<p>Fumeur : <b><% if (recup.getFumeur() == null)
+	<p>Fumeur : <b><% if (client.getFumeur() == null)
 		out.println("non");
 		else
 		out.println("oui"); %></b></p>
-	<p>Nombre de personne : <b><%=recup.getNbPersonne() %></b></p>
-	<% int nbP = Integer.parseInt(recup.getNbPersonne());
+	<p>Nombre de personne : <b><%=client.getNbPersonne() %></b></p>
+	<% int nbP = Integer.parseInt(client.getNbPersonne());
 		if (nbP == 2)
 			base += 50;
 		else if (nbP == 3)
 			base += 80;
 		else if(nbP == 4)
 			base += 100; %>
-	<p>Région d'origine : <b><%=recup.getRegion() %></b></p>
+	<p>Région d'origine : <b><%=client.getRegion() %></b></p>
 	<% prix = base * nbN; %>
   <br>
 	<p>Le prix total sera de  <b><%=prix %></b> euros !</p>

@@ -108,6 +108,17 @@ p
   margin: 10px;
 }
 
+table
+{
+	margin: auto;
+}
+
+th
+{
+	color: white;
+	background-color: #008080;
+}
+
 #gal
 {
   display: flex;
