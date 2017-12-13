@@ -85,7 +85,7 @@
      	<div class="input-field col s4">
         	<p>Nombre de nuits souhaitées *</p>
         	<i class="material-icons prefix">star</i>
-        	<input id="nuits" name="nuits" placeholder="Nuits" type="number" class="validate" required="required">
+        	<input id="nuits" name="nuits" placeholder="Nuits" type="text" class="validate" required="required">
        		<label for="nuits" data-error="Erreur" data-success="Correct">Nombre de nuits</label>
         	<label>Nombre de nuits</label>
     	</div>
@@ -93,7 +93,10 @@
 
 <!-- checkbox -->
 <!-- checkbox radio loisir / pro -->
-<p class="coord">Quelle est la nature de votre séjour ?</p>
+<div class="row">
+<div class="col s4">
+<fieldset>
+<p>Quelle est la nature de votre séjour ?</p>
 
       <p>
         <input class="with-gap" name="groupeRadio" type="radio" id="loisir" checked="checked" value="loisir"/>
@@ -104,41 +107,44 @@
         <label for="professionnel">Professionnel</label>
       </p>
      <br>
-
+</fieldset>
+</div>
 <!-- checkbox case options -->
-<p class="coord">Souhaitez-vous des options ?</p>
-<div class="row">
-  <div class="input-field col s4">
+<div class="col s8">
+
+<p>Souhaitez-vous des options ?</p>
+
+    <div class="col s4">
    	<p>
       <input type="checkbox" name="parking" class="filled-in" id="parking" value="parking" />
-      <label for="parking">Parking : + 5 € par jour (petit prix, car situé à 10 km de la maison)</label>
+      <label for="parking">Parking : + 5 € par jour</label>
     </p>
-  </div>
-  <div class="input-field col s4">
     <p>
       <input type="checkbox" name="animal" class="filled-in" id="animal" value="animal"/>
-      <label for="animal">Animal : + 10 € par jour (interdit aux lions, requins et gnous)</label>
+      <label for="animal">Animal : + 10 € par jour</label>
     </p>
-  </div>
-</div>
-<div class="row">
-  <div class="input-field col s4">
-    <p>
-      <input type="checkbox" name="parapluie" class="filled-in" id="parapluie" value="parapluie"/>
-      <label for="parapluie">Parapluie : + 5 € par jour (parfois très utile ici !)</label>
-    </p>
-    <p>
-      <input type="checkbox" name="fumeur" class="filled-in" id="fumeur" value="fumeur"/>
-      <label for="fumeur">Fumeur (accès à la terrasse, située en partie privée)</label>
-    </p>
-  </div>
+    </div>
+    <div class="col s4">
+      <p>
+        <input type="checkbox" name="parapluie" class="filled-in" id="parapluie" value="parapluie"/>
+        <label for="parapluie">Parapluie : + 5 € par jour</label>
+      </p>
+      <p>
+        <input type="checkbox" name="fumeur" class="filled-in" id="fumeur" value="fumeur"/>
+        <label for="fumeur">Fumeur</label>
+      </p>
+    </div>
+
+
+    </div>
 </div>
   <br>
 
   <!-- 2 combo box -->
+        <div class="row">
+        <div class="input-field col s6">
 <p class="coord">Choisissez le nombre de personne :</p>
 
-<div class="input-field col s4">
     <select name="nbPersonne">
       <option value="" disabled selected>Nombre de personne</option>
       <option value="1">une personne (prix de base)</option>
@@ -148,12 +154,12 @@
 	</select>
     <label>Nombre de personne</label>
   </div>
-  <br>
 
+	<div class="input-field col s6">
 <p class="coord">Indiquez votre région d'origine :</p>
 
   <!-- Dropdown Structure -->
-	<div class="input-field col s4">
+
     <select name="region">
       <option value="" disabled selected>Région d'origine</option>
       <option value="Auvergne-Rhone-Alpes">Auvergne-Rhône-Alpes</option>
@@ -176,16 +182,24 @@
   </div>
   <br>
 
-<!-- estimation du prix -->
-  <P class="coord">Récapitulatif de la demande :</p>
-  <a class="waves-effect waves-light btn"><i class="material-icons right">list</i>recapitulatif</a>
-  <br><br>
+<!-- estimation du prix
+<div class="row">
+<div class="col s6">
+  <p>Récapitulatif de la demande :</p>
+  <button class="waves-effect waves-light btn" type="submit">Estimation
+  <i class="material-icons right">list</i>
+  </button>
+</div> -->
 
 <!-- bouton d'envoi -->
-  <button class="btn waves-effect waves-light btn-large" type="submit" name="saisie">Valider la réservation
+<div class="boutonConf">
+  <p class="boutonConf">Confirmer la commande :</p>
+  <button class="btn waves-effect waves-light btn-large" type="submit" name="saisie">Estimation
   <i class="material-icons right">send</i>
   </button>
-
+</div>
+</div>
+<br>
 <!-- fermeture du formulaire -->
 </form>
 

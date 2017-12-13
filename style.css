@@ -61,19 +61,15 @@ b
 }
 
 /* site ordinateur */
-table .bordure
+#fond-index
 {
-  border-width:1px;
-  border-style:solid;
-  border-color:black;
-  width:50%;
+	background-image: url(images/vague.jpg);
+	background-size: 100%;
 }
-
-tr .fond
+body
 {
-  color: red;
+	background-color: #f1f8e9;
 }
-
 b
 {
   color: black;
@@ -84,12 +80,11 @@ p
   color: black;
 }
 
-body
+.boutonConf
 {
-  background-color: #ffffff;
+	text-align: center;
+	align: center;
 }
-
-
 
 #centre
 {
