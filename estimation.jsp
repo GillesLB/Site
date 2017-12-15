@@ -22,11 +22,19 @@
 	<p>Nom : <b><%=client.getNom() %></b></p>
 	<p>Prénom : <b><%=client.getPrenom() %></b></p>
 	<p>E-mail : <b><%=client.getEmail() %></b></p>
-	<p>Numéro de téléphone : <b><%=client.getnTelephone() %></b></p>
+	<p>Numéro de téléphone : <b><%=client.getNTelephone() %></b></p>
 	<p>Nature du séjour : <b><%=client.getGroupeRadio() %></b></p>
 	<p>Date arrivée : <b><%=client.getArrivee() %></b></p>
 	<p>Nombre de nuits : <b><%=client.getNuits() %></b></p>
 	<% int nbN = Integer.parseInt(client.getNuits()); %>
+	<p>Nombre de personne : <b><%=client.getNbPersonne() %></b></p>
+	<% int nbP = Integer.parseInt(client.getNbPersonne());
+		if (nbP == 2)
+			base += 50;
+		else if (nbP == 3)
+			base += 80;
+		else if(nbP == 4)
+			base += 100; %>
 	<p>Parking : <b><% if (client.getParking() == null)
 		out.println("non");
 		else {
@@ -49,14 +57,6 @@
 		out.println("non");
 		else
 		out.println("oui"); %></b></p>
-	<p>Nombre de personne : <b><%=client.getNbPersonne() %></b></p>
-	<% int nbP = Integer.parseInt(client.getNbPersonne());
-		if (nbP == 2)
-			base += 50;
-		else if (nbP == 3)
-			base += 80;
-		else if(nbP == 4)
-			base += 100; %>
 	<p>Région d'origine : <b><%=client.getRegion() %></b></p>
 	<% prix = base * nbN; %>
   <br>

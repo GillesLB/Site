@@ -24,27 +24,22 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body style="background-color:#f1f8e9">
- 	<% Client client = (Client) request.getAttribute("client");
-	int base = 100;
-	int nbN = Integer.parseInt(client.getNuits());
-	int prix = base * nbN;
-	int nbP = Integer.parseInt(client.getNbPersonne());
-	if (nbP == 2)
-		base += 50;
-	else if (nbP == 3)
-		base += 80;
-	else if(nbP == 4)
-		base += 100;
-	%>
+
+ 	<%  
+ 		Client client = (Client) request.getAttribute("client");
+ 		int base = 100;
+ 	%>
+		
 	<p>Formulaire de réservation</p>
 	<br>
 	<p>Nom : <b><%=client.getNom()%></b></p>
 	<p>Prénom : <b><%=client.getPrenom()%></b></p>
 	<p>E-mail : <b><%=client.getEmail()%></b></p>
 	<p>Numéro de téléphone : <b><%=client.getnTelephone()%></b></p>
-	<p>Nature du séjour : <b><%=client.getGroupeRadio()%></b></p>
 	<p>Date arrivée : <b><%=client.getArrivee()%></b></p>
 	<p>Nombre de nuits : <b><%=client.getNuits()%></b></p>
+	<p>Nature du séjour : <b><%=client.getGroupeRadio()%></b></p>
+	<p>Nombre de personne : <b><%=client.getNbPersonne() %></b></p>
 	<p>Parking : <b><% if (client.getParking() == null)
 		out.println("non");
 		else {
@@ -67,9 +62,25 @@
 		out.println("non");
 		else
 		out.println("oui"); %></b></p>
-	<p>Nombre de personne : <b><%=client.getNbPersonne() %></b></p>
-	<p>Région d'origine : <b><%=client.getRegion() %></b></p>
-  <br>
+	<p>Région d'origine : <b>
+		<%	
+			if (client.getRegion() == null)
+			out.println("non renseignée");
+			else {
+			out.println(client.getRegion());
+			} %></b></p>
+		<% 
+			int nbN = Integer.parseInt(client.getNuits());
+			int nbP = Integer.parseInt(client.getNbPersonne());
+			if (nbP == 2)
+				base += 50;
+			else if (nbP == 3)
+				base += 80;
+			else if(nbP == 4)
+				base += 100;
+			int prix = base * nbN;
+		%>	
+	<br>
 	<p>Le prix total sera de  <b><%=prix %></b> euros !</p><br>
 	
 	<p>Souhaitez-vous confirmer ?</p>

@@ -15,6 +15,7 @@
 </head>
 
 <body>
+	<!-- affiche le contenu de l'ArrayList listeClients -->
 	<table class="striped">
 		<tr>
 			<th>Nom</th>
@@ -47,6 +48,7 @@
 			<td><%=serveur.getArrivee()%></td>
 			<td><%=serveur.getNuits()%></td>
 			<td><%=serveur.getGroupeRadio()%></td>
+			<td><%=serveur.getNbPersonne()%></td>
 			<td>
 				<%
 					if (serveur.getParking() == null)
@@ -83,8 +85,14 @@
 							}
 				%>
 			</td>
-			<td><%=serveur.getNbPersonne()%></td>
-			<td><%=serveur.getRegion()%></td>
+			<td><%
+					if (serveur.getRegion() == null)
+								out.println("non renseignée");
+							else {
+								out.println(serveur.getRegion());
+							}
+				%>
+			</td>
 		</tr>
 		<%
 			}
