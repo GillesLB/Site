@@ -4,12 +4,25 @@
 {
 body
 {
-  font-size: 90%;
+	background-color: #f1f8e9;
+}
+
+.carousel .carousel-item
+{
+  width:200px;
+}
+
+.pres
+{
+  text-align: center;
+  font-weight: bold;
+  color: #1b5e20;
+	font-size: 20px !important;
 }
 
 b
 {
-  color:black;
+  color: #1b5e20;
 }
 
 #bann
@@ -42,7 +55,7 @@ b
 .collection-item
 {
   max-width: 50%;
-    height: auto;
+  height: auto;
 }
 
 .materialboxed
@@ -63,21 +76,61 @@ b
 /* site ordinateur */
 #fond-index
 {
-	background-image: url(images/vague.jpg);
-	background-size: 100%;
+	 background-image: url(images/vague.jpg);
+   position: fixed;
+   top: 0;
+   left: 0;
+   /* Préserve le ratio de l'image */
+   min-width: 100%;
+   min-height: 100%;
+   max-width: 100%;
 }
+
 body
 {
 	background-color: #f1f8e9;
 }
+
 b
 {
-  color: black;
+  color: #1b5e20;
 }
 
-p
+.pres
 {
-  color: black;
+  text-align: center;
+  font-weight: bold;
+  color: #1b5e20;
+	font-size: 36px;
+}
+
+.descrip
+{
+	color: #1b5e20;
+}
+
+.classe
+{
+  color: #1b5e20;
+	font-size: 36px;
+}
+
+.embed-container
+{
+	 position: relative;
+	 padding-bottom: 56.25%;
+	 height: 0;
+	 overflow: hidden;
+	 max-width: 100%;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .boutonConf
@@ -128,9 +181,15 @@ th
   justify-content: center;
 }
 
+#stitre
+{
+	color: #1b5e20;
+	text-align: center;
+}
+
 .actuel
 {
-  background: #ffffff;
+  background: #388e3c;
 }
 
 .langue
@@ -157,6 +216,40 @@ th
   color: black;
 }
 
+#drapeau-en
+{
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 20%;
+}
+
+#drapeau-en:hover
+{
+  background-image:url(images/accueil-drapeau-english-pc02.jpg);
+}
+
+
+#drapeau-fr
+{
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 20%;
+}
+
+#drapeau-fr:hover
+{
+  background-image:url(images/accueil-drapeau-france-pc02.jpg);
+}
+
+.grid-container
+{
+    display: grid;
+    grid-template-columns: 100px;
+    grid-gap: 20px;
+}
+
 .coord
 {
   color: black;
@@ -171,8 +264,8 @@ th
 
 .nav-wrapper
 {
-  background-color: #ffca28;
-  color: black !important;
+  background-color: #1b5e20;
+  color: white;
 }
 
 .right
@@ -182,12 +275,5 @@ th
 
 .carousel .carousel-item
 {
-  width:400px !important;
-}
-
-.pres
-{
-  text-align: center;
-  font-weight: bold;
-  color: black;
+  width:400px;
 }
