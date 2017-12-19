@@ -40,11 +40,11 @@
  	  </div>
   </div>
 
-<!-- formulaire d'identité -->
-<h4 class="pres">Afin de pouvoir réserver la maison, merci de bien vouloir remplir ce formulaire</h4>
-<br>
+  <!-- formulaire d'identité -->
+  <h4 class="pres">Afin de pouvoir réserver la maison, merci de bien vouloir remplir ce formulaire</h4>
+  <br>
 
-<p class="coord">Quelles sont vos coordonnées ?</p>
+  <p class="coord">Quelles sont vos coordonnées ?</p>
     <form name="saisie" class="col s12" method="post" action="reservationServlet">
       <div class="row">
         <div class="input-field col s6">
@@ -136,13 +136,13 @@
 
 
     </div>
-</div>
+  </div>
   <br>
 
   <!-- 2 combo box -->
-        <div class="row">
-        <div class="input-field col s6">
-<p class="coord">Choisissez le nombre de personne * :</p>
+  <div class="row">
+  <div class="input-field col s6">
+    <p class="coord">Choisissez le nombre de personne * :</p>
 
     <select name="nbPersonne">
       <option value="" disabled selected>Nombre de personne</option>
@@ -150,15 +150,14 @@
       <option value="2">deux personnes (base + 50 €)</option>
       <option value="3">trois personnes (base + 80 €)</option>
       <option value="4">quatre personnes (maximum !) (base + 100 €)</option>
-	</select>
+	  </select>
     <label>Nombre de personne</label>
   </div>
 
 	<div class="input-field col s6">
-<p class="coord">Indiquez votre région d'origine :</p>
+    <p class="coord">Indiquez votre région d'origine :</p>
 
-  <!-- Dropdown Structure -->
-
+    <!-- Dropdown Structure -->
     <select name="region">
       <option value="" disabled selected>Région d'origine</option>
       <option value="Auvergne-Rhone-Alpes">Auvergne-Rhône-Alpes</option>
@@ -181,13 +180,13 @@
   </div>
   <br>
 
-<!-- bouton d'envoi -->
-<div class="boutonConf">
-  <p class="boutonConf">Confirmer la commande :</p>
-  <button class="btn waves-effect waves-light btn-large" type="submit" name="saisie">Estimation
-  <i class="material-icons right">send</i>
-  </button>
-</div>
+  <!-- bouton d'envoi -->
+  <div class="boutonConf">
+    <p class="boutonConf">Confirmer la commande :</p>
+    <button class="btn waves-effect waves-light btn-large" type="submit" name="saisie">Estimation
+    <i class="material-icons right">send</i>
+    </button>
+  </div>
 </div>
 <br>
 <!-- fermeture du formulaire -->
@@ -209,8 +208,8 @@
       </script>
 
       <script>
-      $(document).ready(function() {
-          $('select').material_select();
+        $(document).ready(function() {
+        $('select').material_select();
         });
       </script>
 
@@ -226,26 +225,26 @@
 
       <!-- parallax -->
       <script>
-      $(document).ready(function(){
-            $('.parallax').parallax();
-          });
+        $(document).ready(function(){
+        $('.parallax').parallax();
+        });
       </script>
 
       <!-- calendrier du formulaire -->
       <script>
-          $(document).ready(function () {
-            $('select').material_select();
-          });
+        $(document).ready(function () {
+        $('select').material_select();
+        });
 
-          $('.datepicker').pickadate({
-            selectMonths: true, // Creates a dropdown to control month
-            selectYears: 15, // Creates a dropdown of 15 years to control year,
-            today: 'Aujourdhui',
-            clear: 'Annuler',
-            close: 'Ok',
-            closeOnSelect: false // Close upon selecting a date,
-          });
-        </script>
+        $('.datepicker').pickadate({
+          selectMonths: true, // Creates a dropdown to control month
+          selectYears: 15, // Creates a dropdown of 15 years to control year,
+          today: 'Aujourdhui',
+          clear: 'Annuler',
+          close: 'Ok',
+          closeOnSelect: false // Close upon selecting a date,
+        });
+      </script>
 
   </body>
 
